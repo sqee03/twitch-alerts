@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Twitch Alerts Animation CSS</title>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
+    <style>
+      textarea {
+        width:100%;
+      }
+      .btn {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+  <div id="cssApp" class="container">
+    <h1>Overwatch Themed Alert Code for Twitch Alerts</h1>
+    <p>To set up the your custom Twitch Alerts, follow these instruction:</p>
+    <ol>
+      <li>Log in to Twitch Alerts account</li>
+      <li>Click the alert box widget tab</li>
+      <li>Select the tab for the alert you’d like to set up</li>
+      <li>Copy the appropriate message template code</li>
+      <li>Replace the code in Twitch Alerts with the copied code</li>
+      <li>Set Text Animation to none</li>
+      <li>Remove any image inside of Twitch Alerts</li>
+      <li>Set up your alert sound as normal</li>
+      <li>Set alert duration to at least 8 seconds</li>
+      <li><strong>Important update (not in video): </strong>Set Alert Text Delay to 1 second in the general options.</li>
+      <li>Under font settings, choose a text and highlight color</li>
+      <li>Repeat this process for any other alerts you’d like to use this custom CSS for</li>
+      <li>Click Save settings</li>
+      <li>Under “How To” Check the boxes of the alerts you’d like to add in, and copy the URL</li>
+      <li>In OBS Studio add a new Browser source, paste in the URL, set width to 1920 and height to 1080</li>
+      <li>Copy the CSS code from this page</li>
+      <li>Replace all CSS inside of OBS Studio with the CSS from this page</li>
+      <li>Hit Ok and use the test buttons to verify that everything is working</li>
+    </ol>
+
+    <div class="row">
+      <div class="form-group col-xs-6">
+        <h1>Message Templates</h1>
+        
+<h3>Follower</h3>
+<button onclick="copyToClipboard('follow')" type="button" class="btn btn-success">Copy Follower HTML</button>
+      
+<textarea name="" data-html="true" id="follow" rows="4">
+<b style="background: rgba(37, 48, 74, .8)" id="line"><b id="mainText">{name}</b><b id="subText">is now following!</b></b>
+</textarea>
+
+<h3>Donation / Tip</h3>
+<button onclick="copyToClipboard('tip')" type="button" class="btn btn-success">Copy Donation / Tip HTML</button>
+<p><strong>Important: </strong>you may want to change the "Donator Message Settings", to have "Do Not Show" for the Show Message Option.</p>
+<textarea name="" data-html="true" id="tip" rows="4">
+<b style="background: rgba(37, 48, 74, .8)" id="line"><b id="mainText">{name}</b><b id="subText">donated {amount}!</b></b>
+</textarea>
+
+<h3>Host</h3>
+<button onclick="copyToClipboard('host')" type="button" class="btn btn-success">Copy Host HTML</button>
+      
+<textarea name="" data-html="true" id="host" rows="4">
+<b style="background: rgba(37, 48, 74, .8)" id="line"><b id="mainText">{name}</b><b id="subText">is hosting with {count} viewers!</b></b>
+</textarea>
+
+<h3>Subscriber</h3>
+<button onclick="copyToClipboard('sub')" type="button" class="btn btn-success">Copy Subscriber HTML</button>
+      
+<textarea name="" data-html="true" id="sub" rows="4">
+<b style="background: rgba(37, 48, 74, .8)" id="line"><b id="mainText">{name}</b><b id="subText">has just subscribed!</b></b>
+</textarea>
+
+<h3>Resubscriber</h3>
+<button onclick="copyToClipboard('resub')" type="button" class="btn btn-success">Copy Subscriber HTML</button>
+      
+<textarea name="" data-html="true" id="resub" rows="4">
+<b style="background: rgba(37, 48, 74, .8)" id="line"><b id="mainText">{name}</b><b id="subText">has just resubscribed for {months} months!</b></b>
+</textarea>
+
+      </div>
+      <div class="form-group col-xs-6">
+        <h1>CSS</h1>
+
+<h3>Override CSS</h3>
+<button onclick="copyToClipboard('css')" type="button" class="btn btn-success">Copy CSS</button>
+      
+<textarea name="" data-html="true" id="css" rows="5">
+body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}  
+
+#widget, #body, #alert-box, #wrap, #alert-text-wrap, #alert-text{
+  position: relative;
+  overflow: hidden;
+  width: 1920px;
+  height: 1080px;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+
+#alert-box.hidden, .hidden {
+  opacity: 1;
+}
+
+#line {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  margin-left: 0;
+  display: block;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  opacity: 0;
+  -webkit-animation: lineIn 0.2s .6s forwards, 
+             lineGrow 0.4s 1s forwards,
+             linehide 0.5s 6.7s forwards;
+          animation: lineIn 0.2s .6s forwards, 
+             lineGrow 0.4s 1s forwards,
+             linehide 0.5s 6.7s forwards; 
+}
+
+@-webkit-keyframes lineIn {
+  0% {width: 0; height: 0px;}
+  100% {width: 2200px; margin-left: -1100px; opacity: 1; height: 3px;}
+}
+
+@keyframes lineIn {
+  0% {width: 0; height: 0px;}
+  100% {width: 2200px; margin-left: -1100px; opacity: 1; height: 3px;}
+}
+
+@-webkit-keyframes lineGrow {
+  0% {}
+  100% {height: 200px; top: 300px;}
+}
+
+@keyframes lineGrow {
+  0% {}
+  100% {height: 200px; top: 300px;}
+}
+
+@-webkit-keyframes linehide {
+  0% {height: 200px;top: 300px;}
+  100% {height: 0px; top: 400px;}
+}
+
+@keyframes linehide {
+  0% {height: 200px;top: 300px;}
+  100% {height: 0px; top: 400px;}
+}
+
+
+#mainText {
+  text-align: center;
+  font-size: 100px;
+  width: 2200px;
+  display: block;
+  line-height: 100px;
+  text-indent: -3000px;
+  position: absolute;
+  top: 30px;
+  white-space: nowrap;
+  opacity: 0;
+  font-family: "BigNoodleTitling", sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  display: block !important;
+  position: absolute !important;
+  -webkit-animation: textIn 0.4s 1.4s forwards,
+             textTravel 4.6s 1.8s linear forwards;
+          animation: textIn 0.4s 1.4s forwards,
+             textTravel 4.6s 1.8s linear forwards;
+}
+
+@-webkit-keyframes textIn {
+  0% {text-indent: -3000px;opacity: 1;}
+  100% {text-indent: -20px;opacity: 1;} 
+}
+
+@keyframes textIn {
+  0% {text-indent: -3000px;opacity: 1;}
+  100% {text-indent: -20px;opacity: 1;} 
+}
+
+@-webkit-keyframes textTravel {
+  0% {text-indent: -20px;}
+  90% {text-indent: 20px;}
+  95% {text-indent: 3000px;} 
+  100% {text-indent: 3000px;} 
+}
+
+@keyframes textTravel {
+  0% {text-indent: -20px;}
+  90% {text-indent: 20px;}
+  95% {text-indent: 3000px;} 
+  100% {text-indent: 3000px;} 
+}
+
+#subText {
+  text-align: center;
+  font-size: 40px;
+  width: 2200px;
+  display: block;
+  line-height: 40px;
+  text-indent: 3000px;
+  position: absolute;
+  bottom: 30px;
+  white-space: nowrap;
+  opacity: 0;
+  font-family: "BigNoodleTitling", sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  display: block !important;
+  position: absolute !important;
+  -webkit-animation: tagIn 0.4s 1.4s forwards,
+             tagTravel 4.6s 1.8s linear forwards;
+          animation: tagIn 0.4s 1.4s forwards,
+             tagTravel 4.6s 1.8s linear forwards;
+}
+
+@-webkit-keyframes tagIn {
+  0% {text-indent: 3000px;opacity: 1;} 
+  100% {text-indent: 20px;opacity: 1;} 
+}
+
+@keyframes tagIn {
+  0% {text-indent: 3000px;opacity: 1;} 
+  100% {text-indent: 20px;opacity: 1;} 
+}
+
+@-webkit-keyframes tagTravel {
+  0% {text-indent: 20px;}
+  90% {text-indent: -20px;}
+  95% {text-indent: -3000px;} 
+  100% {text-indent: -3000px;}
+}
+
+@keyframes tagTravel {
+  0% {text-indent: 20px;}
+  90% {text-indent: -20px;}
+  95% {text-indent: -3000px;} 
+  100% {text-indent: -3000px;} 
+}
+
+</textarea>
+
+  <h1>Helpful Links</h1>
+
+  <ul>
+    <li><a target="_BLANK" href="http://www.twitchalerts.com/dashboard/">Twitch Alerts Dashboard</a></li>
+    <li><a target="_BLANK" href="http://dl.dafont.com/dl/?f=bignoodle_titling">Download the Big Noodle Font on DaFont.com</a></li>
+    <li><a target="_BLANK" href="https://youtu.be/ufuXo8BK6_A">Video Guide</a></li>
+    <li><a target="_BLANK" href="#">Written Guide</a></li>
+  </ul>
+
+  <h1>Color Picker</h1>
+  <input id="picker" type="text" class="spectrum" data-var="topRectColor" />
+  <p style="margin-top: 20px;">To change the color of the background box, you will need to change the color code in the message template and replace the RGBA value. For example, to change it from blue with 80% opacity to a red with 30% opacity it would change from:</p>
+  <pre>
+    style="background: rgba(37, 48, 74, .8)"
+  </pre>
+  <p>to</p>
+  <pre>
+    style="background: rgba(211, 35, 0, .3)"
+  </pre>
+  
+
+  </div>
+  </div>
+    
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js'></script>
+
+  <script>
+    function copyToClipboard(elementId) {
+
+  // Create a "hidden" input
+  var aux = document.createElement("input");
+
+  aux.setAttribute(
+    "value", 
+    document.getElementById(elementId).innerHTML.replace( /&lt;/g, "<" )
+      .replace( /&gt;/g, ">" )
+      .replace( /&quot;/g, "\"" )
+    );
+      document.body.appendChild(aux);
+      aux.select();
+      document.execCommand("copy");
+      document.body.removeChild(aux);
+    }
+  </script>
+
+  <script>
+
+var colorPalette = [
+  ["#fff", "#000"],
+  ["#1abc9c", "#16a085", "#2ecc71", "#27ae60"],
+  ["#3498db", "#2980b9", "#9b59b6", "#8e44ad"],
+  ["#f1c40f", "#f39c12", "#e67e22", "#d35400"],
+  ["#ecf0f1", "#95a5a6", "#bdc3c7", "#7f8c8d"],
+  ["rgba(248, 255, 177, .5)", "rgba(92, 111, 123, .8)"]
+];
+
+  $("#picker").spectrum({
+    color: "rgba(37, 48, 74, .8)",
+    showInput: true,
+    className: "spectrum",
+    showInitial: true,
+    showPalette: true,
+    palette: colorPalette,
+    showSelectionPalette: true,
+    maxSelectionSize: 10,
+    preferredFormat: "rgb",
+    localStorageKey: "spectrum.demo",
+    showAlpha: true
+  });
+  </script>
+
+  </body>
+</html>

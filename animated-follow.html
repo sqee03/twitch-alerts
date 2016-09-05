@@ -1,0 +1,163 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Alert Box Widget | Streamlabs</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+
+    <script>
+    window.onerror = function(msg, url, line) {
+        return false;
+    };
+
+    //function stubs for xsplit beta
+    window.SetVolume = function() {};
+    window.OnSceneLoad = function() {};
+    window.setBackGroundColor = function() {};
+    window.GetPlayState = function() {};
+    window.UpdateLocalProperty = function() {};
+    </script>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/dist/alert-box/css/alert-box.css">
+    <link rel="stylesheet" href="/css/widgets/text-animations.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?unknown=polyfill&features=default|always|gated"></script>    <script src="//cdnjs.cloudflare.com/ajax/libs/localforage/1.2.3/localforage.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js"></script>
+
+    <!-- needed for profanity -->
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="/scripts/profanity.js"></script>
+    <script src="/vendor/scottschiller/SoundManager2/script/soundmanager2-nodebug-jsmin.js"></script>
+
+    <link href="/build/assets/particles/css/particles-ba2792de59.css" rel="stylesheet">
+    <script src="/build/assets/particles/js/particles-2523e7a29f.js"></script>
+
+    <script>
+    (function(window){
+      var jsManifest = {"dist\/common.min.js":"b6af4155b15a23ecb9fb3f688647f29dce593d36","dist\/dashboard.min.js":"c7280cb5431db52a79295de6caafd18826641538","dist\/vendor.min.js":"6e2bd143753048f0221c0be0d0fc75d397bbea82","dist\/worker.min.js":"6420b4fe789c84eb3d22f49c6ae6313e872d6a7c","dist\/alert-box\/js\/alert-box.min.js":"889bb05812b43b0ba744d2c399a17cb3502f0bfd","dist\/boombox\/js\/boombox.min.js":"9d7e53a42a5d5701176987513837392d149c4713","dist\/chat-box\/js\/chat-box.min.js":"1ef214c3bc45b00effccebb85d7c6526b0bec33d","dist\/event-list\/js\/event-list.min.js":"e8ad08edfe650e4020ba058eb7077750464c6fd2","dist\/payments\/js\/payments.min.js":"435b5af26807c03ce4603dc720ca39022ebbf03f","dist\/recent-events\/js\/recent-events.min.js":"85993f204bba5762c1c70e247c0befc978040cd9","dist\/common.min.css":"603a667f685c0b63d6da0003d7b15d4e34319889"};
+      window.resolveAsset = function(path) {
+        if (jsManifest[path.slice(1)]) {
+          return path.replace('.min.js', '.r' + jsManifest[path.slice(1)].slice(0, 7) + '.min.js');
+        }
+
+        return path;
+      }
+    })(window);
+    </script>
+    <script src="/dist/vendor.r6e2bd14.min.js"></script>
+    <script src="/dist/alert-box/js/alert-box.r889bb05.min.js"></script>
+
+    <style>
+    #boombox iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 240px;
+      height: 135px;
+      border: none;
+      opacity: 0;
+    }
+
+    /*#boombox iframe[src] {
+      width: 100%;
+      height: 100%;
+    }*/
+
+    /*#boombox.playing iframe {
+      width: 100%;
+      height: 100%;
+    }*/
+
+    #boombox iframe.show {
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+    }
+
+    #boombox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 38px;
+      right: 0;
+      z-index: 10000;
+    }
+
+    #widget {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 9999;
+    }
+
+    #shield {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 10001;
+    }
+
+    #shield > div {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      line-height: 38px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #FFF;
+      text-align: right;
+      padding-right: 10px;
+      box-sizing: border-box;
+    }
+
+    #particles {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        transition: opacity 1000ms;
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="shield">
+      <div id="attribution">
+        <span class="name"></span>
+        <span class="timer"></span>
+      </div>
+    </div>
+    <div id="boombox"></div>
+    <div id="widget"></div>
+
+    <script>
+    var widget = new AlertBox(document.getElementById('widget'), {"token":"38B97BEBBECC97DEA9A5","twitchToken":"euy7093dkdilz2ydlcfnsznrfpzpzv","username":"sqee03"});
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-52139786-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</body>
+
+</html>
