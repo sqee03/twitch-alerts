@@ -1,0 +1,9 @@
+Follow variants:
+
+Normal:
+<span id="line"><strong id="mainText">{name}</strong><em id="subText">Vítej a užívej si stream!</em></span>
+<span id="line"><strong id="mainText">{name}</strong><em id="subText">A hele, kdo se k nám přidal :-)</em></span>
+<span id="line"><strong id="mainText">{name}</strong><em id="subText">Díky za follow!</em></span>
+
+Special:
+<span id="line" class="special"><strong id="mainText">{name}</strong><em id="subText">Vauuuuuuu! <i>Bonus kód: WOT-SQEE-500</i></em></span>
