@@ -1,5 +1,46 @@
 @import url(https://fonts.googleapis.com/css?family=BenchNine:400,700,300&subset=latin,latin-ext);
 
+@keyframes name {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes move-down {
+  from {
+    top: 0;
+  }
+  to {
+    top: 50%;
+  }
+}
+@keyframes fades-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+@keyframes spinning-image {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes finished-follow {
+  from {
+    top: 50px;
+  }
+  to {
+    top: -200px;
+  }
+}
+
 body {
   background: #222 url(../images/sample-screen.jpg);
   background-size: cover;
@@ -37,43 +78,66 @@ html, body {
   font-family: "BenchNine", sans-serif;
   color: #fff;
   white-space: nowrap;
+
+  animation: fades-in 1s 0 cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards,
+            finished-follow 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;
 }
 .circle {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  -webkit-animation: hue 60s infinite linear;
   display: inline-block;
   line-height: 250px;
   background: rgba(0, 0, 0, 0.35) url('../images/sqee-logo.png') no-repeat center center;
   background-size: 60% 60%;
+
+  animation: spinning-image 1s 5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;
 }
 #info {
   display: block;
   width: 300px;
+  height: 66px;
   position: absolute;
   left: 150px;
   top: 50%;
   margin-left: 15px;
   margin-top: -25%;
   text-align: left;
+  overflow: hidden;
+  /*border: 1px solid red;*/
 }
 #info * {
-  float: left;
   display: block;
   line-height: 110%;
 }
-#follow strong {
-  font-size: 1.75em;
+#info strong {
+  position: absolute;
+  right: 100%;
+
+  font-size: 25px;
   padding: 3px 10px;
   background-color: rgba(208, 0, 220, 0.8);
+
+  animation-name: name;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(1.000, 0.005, 0.520, 1.000);
+  overflow: hidden;
 }
-#follow em {
+#info em {
+  position: absolute;
+  top: 0;
+  right: 100%;
+
   clear: left;
-  font-size: 1.5em;
+  font-size: 23px;
   font-style: normal;
   padding: 5px 10px;
   background-color: rgba(0, 0, 0, 0.5);
+
+  animation: name 0.7s 2s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards,
+              move-down 0.4s 2.7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;
 }
 
 .sonar-stroke:after {
