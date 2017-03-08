@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=BenchNine:400,700,300&subset=latin,latin-ext);
+
+body {
+  background: #222 url(../images/sample-screen.jpg);
+  background-size: cover;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+#widget, #body, #alert-box, #wrap, #alert-text-wrap, #alert-text {
+  position: relative;
+  overflow: hidden;
+  width: 1920px;
+  height: 1080px;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+
+#alert-box.hidden, .hidden {
+  opacity: 1;
+}
+
+#follow {
+  display: block;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: "BenchNine", sans-serif;
+  color: #fff;
+  white-space: nowrap;
+}
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -webkit-animation: hue 60s infinite linear;
+  display: inline-block;
+  line-height: 250px;
+  background: rgba(0, 0, 0, 0.35) url('../images/sqee-logo.png') no-repeat center center;
+  background-size: 60% 60%;
+}
+#info {
+  display: block;
+  width: 300px;
+  position: absolute;
+  left: 150px;
+  top: 50%;
+  margin-left: 15px;
+  margin-top: -25%;
+  text-align: left;
+}
+#info * {
+  float: left;
+  display: block;
+  line-height: 110%;
+}
+#follow strong {
+  font-size: 1.75em;
+  padding: 3px 10px;
+  background-color: rgba(208, 0, 220, 0.8);
+}
+#follow em {
+  clear: left;
+  font-size: 1.5em;
+  font-style: normal;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sonar-stroke:after {
+  border-color: rgba(208, 0, 220, 0.8) !important;
+}
