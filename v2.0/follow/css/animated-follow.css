@@ -1,11 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=BenchNine:400,700,300&subset=latin,latin-ext);
 
-@keyframes name {
+@keyframes move-right {
   from {
-    right: 100%;
+    left: -100%;
   }
   to {
-    right: 0;
+    left: 0;
+  }
+}
+@keyframes move-left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
   }
 }
 @keyframes move-down {
@@ -22,6 +30,14 @@
   }
   to {
     opacity: 100;
+  }
+}
+@keyframes fades-out {
+  from {
+    opacity: 100;
+  }
+  to {
+    opacity: 0;
   }
 }
 @keyframes spinning-image {
@@ -79,8 +95,9 @@ html, body {
   color: #fff;
   white-space: nowrap;
 
-  animation: fades-in 1s 0 cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards,
-            finished-follow 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;
+  animation: fades-in 1.5s 0 cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards,
+            fades-out 1s 8s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;
+            /*finished-follow 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards*/
 }
 .circle {
   width: 150px;
@@ -96,7 +113,7 @@ html, body {
 #info {
   display: block;
   width: 300px;
-  height: 66px;
+  height: 63px;
   position: absolute;
   left: 150px;
   top: 50%;
@@ -108,36 +125,39 @@ html, body {
 }
 #info * {
   display: block;
-  line-height: 110%;
+  /*line-height: 110%;*/
 }
 #info strong {
   position: absolute;
-  right: 100%;
+  left: -100%;
 
+  max-width: 92%;
+  text-overflow: ellipsis;
   font-size: 25px;
-  padding: 3px 10px;
+  height: 31px;
+  line-height: 32px;
+  padding: 0 10px;
   background-color: rgba(208, 0, 220, 0.8);
-
-  animation-name: name;
-  animation-delay: 1s;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(1.000, 0.005, 0.520, 1.000);
   overflow: hidden;
+
+  animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards,
+              move-left 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;
 }
 #info em {
   position: absolute;
   top: 0;
-  right: 100%;
+  left: -100%;
 
-  clear: left;
+  height: 31px;
+  line-height: 32px;
   font-size: 23px;
   font-style: normal;
-  padding: 5px 10px;
+  padding: 0 10px;
   background-color: rgba(0, 0, 0, 0.5);
 
-  animation: name 0.7s 2s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards,
-              move-down 0.4s 2.7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;
+  animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards,
+              move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards,
+              move-left 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;
 }
 
 .sonar-stroke:after {
