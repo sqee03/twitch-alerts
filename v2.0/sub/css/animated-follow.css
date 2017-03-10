@@ -24,39 +24,34 @@
     top: 50%;
   }
 }
-@keyframes fades-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 100;
-  }
-}
-@keyframes fades-out {
-  from {
-    opacity: 100;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@keyframes pulsing-image {
+@keyframes hovering-image {
   0% {
-    transform: scale(0.75);
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
   }
   50% {
-    transform: rotate(1);
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
   }
-  75% {
-    transform: rotate(0.75);
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
   }
 }
-@keyframes finished-follow {
+@keyframes slide-in {
   from {
-    top: 50px;
+    transform: translateY(-350%);
   }
   to {
-    top: -200px;
+    transform: translateY(0%);
+  }
+}
+@keyframes slide-out {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(500%);
   }
 }
 @keyframes border-draw {
@@ -106,8 +101,10 @@ html, body {
 #follow {
   display: block;
   position: absolute;
-  left: 50px;
-  top: 50px;
+  left: 50%;
+  margin-left: -155px;
+  top: 50%;
+  margin-top: -155px;
   text-align: center;
   text-transform: uppercase;
   font-weight: 300;
@@ -115,9 +112,8 @@ html, body {
   color: #fff;
   white-space: nowrap;
 
-  animation: fades-in 1.5s 0 cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards,
-            /*fades-out 1s 8s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;*/
-            /*finished-follow 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards*/
+  animation: slide-in 0.6s 0 cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards,
+              slide-out 0.6s 10s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
 }
 #circle-holder {
   position: relative;
@@ -126,7 +122,6 @@ html, body {
   border-radius: 50%;
   display: block;
   overflow: hidden;
-  /*background-color: pink;*/
 }
 .circle {
   position: absolute;
@@ -142,22 +137,23 @@ html, body {
 
   box-shadow: 75px -75px 0 2px #000, -75px -75px 0 2px #000, -75px 75px 0 2px #000, 75px 75px 0 2px #000, 0 0 0 2px transparent;
 
-  animation: border-draw 0.5s 3s ease 1 forwards;
+  animation: border-draw 0.5s 2.5s ease 1 forwards;
 }
 .circle #image {
   display: block;
   width: 100%;
   height: 100%;
   background: url('../images/superman-light-112.png') no-repeat center center;
-  background-size: 90% 90%;
-  animation: pulsing-image 1s 0 cubic-bezier(1.000, 0.005, 1.000, 0.325) infinite forwards;
+  background-size: auto;
+  animation: hovering-image 1.5s 0 ease-out infinite forwards;
 }
 
 /* Number of months viewer resuber for */
 #months {
   position: absolute;
-  right: 20%;
-  bottom: 20%;
+  right: 50%;
+  margin-right: -12.5px;
+  bottom: 8%;
   display: block;
   width: 25px;
   height: 25px;
@@ -180,11 +176,9 @@ html, body {
   margin-top: -25%;
   text-align: left;
   overflow: hidden;
-  /*border: 1px solid red;*/
 }
 #info * {
   display: block;
-  /*line-height: 110%;*/
 }
 #info strong {
   position: absolute;
@@ -199,8 +193,8 @@ html, body {
   background-color: rgba(208, 0, 220, 0.8);
   overflow: hidden;
 
-  animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards,
-              move-left 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;
+  animation: move-right 1.5s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards,
+              move-left 1s 8s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;
 }
 #info em {
   position: absolute;
@@ -214,9 +208,9 @@ html, body {
   padding: 0 10px;
   background-color: rgba(0, 0, 0, 0.5);
 
-  animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards,
-              move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards,
-              move-left 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;
+  animation: move-right 1s 4s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards,
+              move-down 0.4s 5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards,
+              move-left 1s 8s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;
 }
 
 .sonar-stroke:after {
