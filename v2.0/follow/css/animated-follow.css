@@ -501,11 +501,11 @@ html, body {
   color: #fff;
   white-space: nowrap;
   opacity: 0;
-  -webkit-animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 1s 8s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;;
-  -moz-animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 1s 8s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;;
-  -ms-animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 1s 8s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;;
-  -o-animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 1s 8s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;;
-  animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 1s 8s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;; }
+  -webkit-animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 0.8s 6.6s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;;
+  -moz-animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 0.8s 6.6s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;;
+  -ms-animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 0.8s 6.6s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;;
+  -o-animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 0.8s 6.6s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;;
+  animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 0.8s 6.6s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;; }
 
 .circle {
   width: 150px;
@@ -548,11 +548,11 @@ html, body {
   padding: 0 10px;
   background-color: #277CFB;
   overflow: hidden;
-  -webkit-animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -moz-animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -ms-animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -o-animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;; }
+  -webkit-animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -moz-animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -ms-animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -o-animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;; }
 
 #info em {
   position: absolute;
@@ -564,11 +564,11 @@ html, body {
   font-style: normal;
   padding: 0 10px;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -moz-animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -ms-animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -o-animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 7s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;; }
+  -webkit-animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -moz-animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -ms-animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -o-animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;; }
 
 .sonar-stroke:after {
   border-color: #277CFB !important; }
