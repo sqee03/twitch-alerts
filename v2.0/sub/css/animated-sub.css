@@ -1,0 +1,172 @@
+@import url(https://fonts.googleapis.com/css?family=BenchNine:400,700,300&subset=latin,latin-ext);
+@keyframes move-right {
+  from {
+    left: -100%; }
+  to {
+    left: 0; } }
+@keyframes move-left {
+  from {
+    left: 0; }
+  to {
+    left: -100%; } }
+@keyframes move-down {
+  from {
+    top: 0; }
+  to {
+    top: 50%; } }
+@keyframes hovering-image {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px); }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px); }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px); } }
+@keyframes slide-in {
+  from {
+    transform: translateY(-350%); }
+  to {
+    transform: translateY(0%); } }
+@keyframes slide-out {
+  from {
+    transform: translateY(0%); }
+  to {
+    transform: translateY(500%); } }
+@keyframes border-draw {
+  0% {
+    box-shadow: 75px -75px 0 2px #000, -75px -75px 0 2px #000, -75px 75px 0 2px #000, 75px 75px 0 2px #000, 0 0 0 2px #96C6FD; }
+  25% {
+    box-shadow: 0 -155px 0 2px #000, -75px -75px 0 2px #000, -75px 75px 0 2px #000, 75px 75px 0 2px #000, 0 0 0 2px #4DA8FC; }
+  50% {
+    box-shadow: 0 -155px 0 2px #000, -155px 0px 0 2px #000, -75px 75px 0 2px #000, 75px 75px 0 2px #000, 0 0 0 2px #605AFB; }
+  75% {
+    box-shadow: 0 -155px 0 2px #000, -155px 0px 0 2px #000, 0px 155px 0 2px #000, 75px 75px 0 2px #000, 0 0 0 2px #9C1CC9; }
+  100% {
+    box-shadow: 0 -155px 0 2px #000, -155px 0px 0 2px #000, 0px 155px 0 2px #000, 155px 50px 0 2px #000, 0 0 0 2px #FC27E5; } }
+body {
+  background: #222 url(../images/sample-screen.jpg);
+  background-size: cover;
+  margin: 0px auto;
+  overflow: hidden; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+#widget, #body, #alert-box, #wrap, #alert-text-wrap, #alert-text {
+  position: relative;
+  overflow: hidden;
+  width: 1920px;
+  height: 1080px;
+  top: 0;
+  left: 0;
+  opacity: 1; }
+
+#alert-box.hidden, .hidden {
+  opacity: 1; }
+
+#follow {
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -155px;
+  top: 50%;
+  margin-top: -155px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: "BenchNine", sans-serif;
+  color: #fff;
+  white-space: nowrap;
+  animation: slide-in 0.6s 0 cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.6s 10s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards; }
+
+#circle-holder {
+  position: relative;
+  width: 154px;
+  height: 154px;
+  border-radius: 50%;
+  display: block;
+  overflow: hidden; }
+
+.circle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 250px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 75px -75px 0 2px #000, -75px -75px 0 2px #000, -75px 75px 0 2px #000, 75px 75px 0 2px #000, 0 0 0 2px transparent;
+  animation: border-draw 0.5s 2.5s ease 1 forwards; }
+
+.circle #image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../images/superman-light-112.png") no-repeat center center;
+  background-size: auto;
+  animation: hovering-image 1.5s 0 ease-out infinite forwards; }
+
+/* Number of months viewer resuber for */
+#months {
+  position: absolute;
+  right: 50%;
+  margin-right: -12.5px;
+  bottom: 8%;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  line-height: 26px;
+  font-size: 20px;
+  text-align: center; }
+
+#info {
+  display: block;
+  width: 300px;
+  height: 63px;
+  position: absolute;
+  left: 150px;
+  top: 50%;
+  margin-left: 15px;
+  margin-top: -25%;
+  text-align: left;
+  overflow: hidden; }
+
+#info * {
+  display: block; }
+
+#info strong {
+  position: absolute;
+  left: -100%;
+  max-width: 92%;
+  text-overflow: ellipsis;
+  font-size: 25px;
+  height: 31px;
+  line-height: 32px;
+  padding: 0 10px;
+  background-color: rgba(208, 0, 220, 0.8);
+  overflow: hidden;
+  animation: move-right 1.5s 2.5s cubic-bezier(1, 0.005, 0.52, 1) forwards, move-left 1s 8s cubic-bezier(1, 0.005, 0.52, 1) forwards; }
+
+#info em {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 31px;
+  line-height: 32px;
+  font-size: 23px;
+  font-style: normal;
+  padding: 0 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: move-right 1s 4s cubic-bezier(1, 0.005, 0.52, 1) forwards, move-down 0.4s 5s cubic-bezier(1, 0.005, 0.52, 1) forwards, move-left 1s 8s cubic-bezier(1, 0.005, 0.52, 1) forwards; }
+
+.sonar-stroke:after {
+  border-color: rgba(208, 0, 220, 0.8) !important; }
