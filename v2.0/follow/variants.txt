@@ -1,0 +1,5 @@
+<b id="line"><b id="mainText">{name}</b><b id="subText">Vítej a užívej si stream!</b></b>
+
+<b id="line" style="background-color: rgba(132, 1, 159, 0.5)"><b id="mainText">{name}</b><b id="subText">A hele, kdo se k nám přidal :-)</b></b>
+
+<b id="line"><b id="mainText">{name}</b><b id="subText">Díky za follow!</b></b>
