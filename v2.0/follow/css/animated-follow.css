@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=BenchNine:400,700,300&subset=latin,latin-ext);
+body {
+  background: url(../images/sample-screen.jpg); }
+
 @-webkit-keyframes sonar-base {
   from {
     padding: 0;
@@ -468,7 +471,6 @@
   to {
     top: -200px; } }
 body {
-  background: #222 url(../images/sample-screen.jpg);
   background-size: cover;
   margin: 0px auto;
   overflow: hidden; }
@@ -501,11 +503,11 @@ html, body {
   color: #fff;
   white-space: nowrap;
   opacity: 0;
-  -webkit-animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 0.8s 6.6s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;;
-  -moz-animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 0.8s 6.6s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;;
-  -ms-animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 0.8s 6.6s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;;
-  -o-animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 0.8s 6.6s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;;
-  animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 0.8s 6.6s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;; }
+  -webkit-animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 0.8s 9.6s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;;
+  -moz-animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 0.8s 9.6s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;;
+  -ms-animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 0.8s 9.6s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;;
+  -o-animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 0.8s 9.6s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;;
+  animation: fades-in 1.5s 0.1s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards, fades-out 0.8s 9.6s cubic-bezier(1.000, 0.005, 1.000, 0.325) forwards;; }
 
 .circle {
   width: 150px;
@@ -515,11 +517,11 @@ html, body {
   line-height: 250px;
   background: rgba(0, 0, 0, 0.35) url("../images/sqee-logo.png") no-repeat center center;
   background-size: 60% 60%;
-  -webkit-animation: spinning-image 1s 5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -moz-animation: spinning-image 1s 5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -ms-animation: spinning-image 1s 5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -o-animation: spinning-image 1s 5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  animation: spinning-image 1s 5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;; }
+  -webkit-animation: spinning-image 1s 8s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -moz-animation: spinning-image 1s 8s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -ms-animation: spinning-image 1s 8s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -o-animation: spinning-image 1s 8s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  animation: spinning-image 1s 8s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;; }
 
 #info {
   display: block;
@@ -548,11 +550,11 @@ html, body {
   padding: 0 10px;
   background-color: #277CFB;
   overflow: hidden;
-  -webkit-animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -moz-animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -ms-animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -o-animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;; }
+  -webkit-animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 9s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -moz-animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 9s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -ms-animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 9s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -o-animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 9s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  animation: move-right 1.5s 1s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 9s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;; }
 
 #info em {
   position: absolute;
@@ -564,11 +566,11 @@ html, body {
   font-style: normal;
   padding: 0 10px;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -moz-animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -ms-animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -o-animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 6s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;; }
+  -webkit-animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 9s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -moz-animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 9s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -ms-animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 9s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -o-animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 9s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  animation: move-right 1s 2.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 3.5s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 9s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;; }
 
 .sonar-stroke:after {
   border-color: #277CFB !important; }

@@ -1,14 +1,17 @@
-/*!
-sonar.css - http://urbanoalvarez.es/sonar.css/
-Licensed under the MIT license - http://opensource.org/licenses/MIT
-Copyright (c) 2015 Alejandro U. Alvarez
-*/
-/*!
-sonar.css - http://urbanoalvarez.es/sonar.css/
-Licensed under the MIT license - http://opensource.org/licenses/MIT
-Copyright (c) 2015 Alejandro U. Alvarez
-*/
 @import url(https://fonts.googleapis.com/css?family=BenchNine:400,700,300&subset=latin,latin-ext);
+body {
+  background: url(../images/sample-screen.jpg); }
+
+/*!
+sonar.css - http://urbanoalvarez.es/sonar.css/
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+Copyright (c) 2015 Alejandro U. Alvarez
+*/
+/*!
+sonar.css - http://urbanoalvarez.es/sonar.css/
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+Copyright (c) 2015 Alejandro U. Alvarez
+*/
 @-webkit-keyframes sonar-base {
   from {
     padding: 0;
@@ -718,7 +721,6 @@ Copyright (c) 2015 Alejandro U. Alvarez
     -o-box-shadow: 0 -155px 0 2px #000, -155px 0px 0 2px #000, 0px 155px 0 2px #000, 155px 50px 0 2px #000, 0 0 0 2px #FC27E5;;
     box-shadow: 0 -155px 0 2px #000, -155px 0px 0 2px #000, 0px 155px 0 2px #000, 155px 50px 0 2px #000, 0 0 0 2px #FC27E5;; } }
 body {
-  background: #222 url(../images/sample-screen.jpg);
   background-size: cover;
   margin: 0px auto;
   overflow: hidden;
@@ -758,11 +760,11 @@ html, body {
   -ms-transform: translateY(-350%);
   -o-transform: translateY(-350%);
   transform: translateY(-350%);
-  -webkit-animation: slide-in 0.6s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.6s 9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-  -moz-animation: slide-in 0.6s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.6s 9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-  -ms-animation: slide-in 0.6s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.6s 9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-  -o-animation: slide-in 0.6s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.6s 9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-  animation: slide-in 0.6s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.6s 9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards; }
+  -webkit-animation: slide-in 0.6s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.6s 10s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  -moz-animation: slide-in 0.6s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.6s 10s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  -ms-animation: slide-in 0.6s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.6s 10s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  -o-animation: slide-in 0.6s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.6s 10s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation: slide-in 0.6s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.6s 10s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards; }
 
 #circle-holder {
   position: relative;
@@ -844,11 +846,11 @@ html, body {
   padding: 0 10px;
   background-color: rgba(208, 0, 220, 0.8);
   overflow: hidden;
-  -webkit-animation: move-right 1.5s 2s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 8s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -moz-animation: move-right 1.5s 2s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 8s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -ms-animation: move-right 1.5s 2s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 8s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -o-animation: move-right 1.5s 2s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 8s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  animation: move-right 1.5s 2s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 8s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;; }
+  -webkit-animation: move-right 1.5s 2s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 10s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -moz-animation: move-right 1.5s 2s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 10s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -ms-animation: move-right 1.5s 2s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 10s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -o-animation: move-right 1.5s 2s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 10s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  animation: move-right 1.5s 2s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 10s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;; }
 
 #info em {
   position: absolute;
@@ -860,11 +862,11 @@ html, body {
   font-style: normal;
   padding: 0 10px;
   background-color: rgba(0, 0, 0, 0.4);
-  -webkit-animation: move-right 1s 3.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 4.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 8s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -moz-animation: move-right 1s 3.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 4.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 8s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -ms-animation: move-right 1s 3.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 4.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 8s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  -o-animation: move-right 1s 3.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 4.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 8s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
-  animation: move-right 1s 3.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 4.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 8s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;; }
+  -webkit-animation: move-right 1s 3.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 4.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 10s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -moz-animation: move-right 1s 3.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 4.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 10s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -ms-animation: move-right 1s 3.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 4.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 10s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  -o-animation: move-right 1s 3.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 4.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 10s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;;
+  animation: move-right 1s 3.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-down 0.4s 4.3s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards, move-left 1s 10s cubic-bezier(1.000, 0.005, 0.520, 1.000) forwards;; }
 
 .sonar-stroke:after {
   border-color: rgba(208, 0, 220, 0.8) !important; }
