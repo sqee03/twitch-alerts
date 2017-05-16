@@ -1,5 +1,5 @@
 // Remove background for production
-body { background: url(../images/sample-screen.jpg); }
+body#develop { background: url(../images/sample-screen.jpg); background-size: cover; }
 
 @import 'mixins.scss';
 @import 'sonar.scss';
@@ -8,6 +8,14 @@ body { background: url(../images/sample-screen.jpg); }
 
 $main-color: rgba(208, 0, 220, 0.8);
 $transparent-black: rgba(0, 0, 0, 0.4);
+
+$size-circle: 200px;
+$size-border: $size-circle/2;
+$size-info-height: 50px;
+$size-months: 35px;
+
+
+
 
 @include keyframes(move-right) {
   from {
@@ -35,13 +43,13 @@ $transparent-black: rgba(0, 0, 0, 0.4);
 }
 @include keyframes (hovering-image) {
   0% {
-    @include vendor-prefix('transform', 'translateY(-8px)');
+    @include vendor-prefix('transform', 'translateY(-16px)');
   }
   50% {
-    @include vendor-prefix('transform', 'translateY(-4px)');
+    @include vendor-prefix('transform', 'translateY(-8px)');
   }
   100% {
-    @include vendor-prefix('transform', 'translateY(-8px)');
+    @include vendor-prefix('transform', 'translateY(-16px)');
   }
 }
 @include keyframes (slide-in) {
@@ -62,19 +70,19 @@ $transparent-black: rgba(0, 0, 0, 0.4);
 }
 @include keyframes (border-draw) {
   0% {
-    @include vendor-prefix('box-shadow', '75px -75px 0 2px #000, -75px -75px 0 2px #000, -75px 75px 0 2px #000, 75px 75px 0 2px #000, 0 0 0 2px #96C6FD;');
+    @include vendor-prefix('box-shadow', '#{$size-border} -#{$size-border} 0 2px #000, -#{$size-border} -#{$size-border} 0 2px #000, -#{$size-border} #{$size-border} 0 2px #000, #{$size-border} #{$size-border} 0 2px #000, 0 0 0 2px #96C6FD;');
   }
   25% {
-    @include vendor-prefix('box-shadow', '0 -155px 0 2px #000, -75px -75px 0 2px #000, -75px 75px 0 2px #000, 75px 75px 0 2px #000, 0 0 0 2px #4DA8FC;');
+    @include vendor-prefix('box-shadow', '0 -#{$size-border * 2 + 5px} 0 2px #000, -#{$size-border} -#{$size-border} 0 2px #000, -#{$size-border} #{$size-border} 0 2px #000, #{$size-border} #{$size-border} 0 2px #000, 0 0 0 2px #4DA8FC;');
   }
   50% {
-    @include vendor-prefix('box-shadow', '0 -155px 0 2px #000, -155px 0px 0 2px #000, -75px 75px 0 2px #000, 75px 75px 0 2px #000, 0 0 0 2px #605AFB;');
+    @include vendor-prefix('box-shadow', '0 -#{$size-border * 2 + 5px} 0 2px #000, -#{$size-border * 2 + 5px} 0px 0 2px #000, -#{$size-border} #{$size-border} 0 2px #000, #{$size-border} #{$size-border} 0 2px #000, 0 0 0 2px #605AFB;');
   }
   75% {
-    @include vendor-prefix('box-shadow', '0 -155px 0 2px #000, -155px 0px 0 2px #000, 0px 155px 0 2px #000, 75px 75px 0 2px #000, 0 0 0 2px #9C1CC9;');
+    @include vendor-prefix('box-shadow', '0 -#{$size-border * 2 + 5px} 0 2px #000, -#{$size-border * 2 + 5px} 0px 0 2px #000, 0px #{$size-border * 2 + 5px} 0 2px #000, #{$size-border} #{$size-border} 0 2px #000, 0 0 0 2px #9C1CC9;');
   }
   100% {
-    @include vendor-prefix('box-shadow', '0 -155px 0 2px #000, -155px 0px 0 2px #000, 0px 155px 0 2px #000, 155px 50px 0 2px #000, 0 0 0 2px #FC27E5;');
+    @include vendor-prefix('box-shadow', '0 -#{$size-border * 2 + 5px} 0 2px #000, -#{$size-border * 2 + 5px} 0px 0 2px #000, 0px #{$size-border * 2 + 5px} 0 2px #000, #{$size-border * 2 + 5px} 50px 0 2px #000, 0 0 0 2px #FC27E5;');
   }
 }
 
@@ -93,8 +101,8 @@ html, body {
 #widget, #body, #alert-box, #wrap, #alert-text-wrap, #alert-text {
   position: relative;
   overflow: hidden;
-  width: 1920px;
-  height: 1080px;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   opacity: 1;
@@ -108,9 +116,9 @@ html, body {
   display: block;
   position: absolute;
   left: 50%;
-  margin-left: -155px;
+  margin-left: -#{$size-border * 2 + 5px};
   top: 50%;
-  margin-top: -155px;
+  margin-top: -#{$size-border * 2 + 5px};
   text-align: center;
   text-transform: uppercase;
   font-weight: 300;
@@ -123,8 +131,8 @@ html, body {
 }
 #circle-holder {
   position: relative;
-  width: 154px;
-  height: 154px;
+  width: $size-circle + 4px;
+  height: $size-circle + 4px;
   border-radius: 50%;
   display: block;
   overflow: hidden;
@@ -133,15 +141,15 @@ html, body {
   position: absolute;
   top: 2px;
   left: 2px;
-  width: 150px;
-  height: 150px;
+  width: $size-circle;
+  height: $size-circle;
   border-radius: 50%;
   display: inline-block;
   line-height: 250px;
   overflow: hidden;
   background-color: $transparent-black;
 
-  box-shadow: 75px -75px 0 2px #000, -75px -75px 0 2px #000, -75px 75px 0 2px #000, 75px 75px 0 2px #000, 0 0 0 2px transparent;
+  box-shadow: $size-border #{-$size-border} 0 2px #000, -$size-border #{-$size-border} 0 2px #000, -$size-border $size-border 0 2px #000, $size-border $size-border 0 2px #000, 0 0 0 2px transparent;
 
   @include vendor-prefix('animation', 'border-draw 0.5s 2.5s ease 1 forwards');
 }
@@ -155,31 +163,32 @@ html, body {
   @include vendor-prefix('animation', 'hovering-image 1.5s 0.1s ease-out infinite forwards');
 }
 
-/* Number of months viewer resuber for */
+/* Number of months viewer resubed for */
 #months {
   position: absolute;
   right: 50%;
-  margin-right: -12.5px;
-  bottom: 8%;
+  margin-right: -$size-months/2;
+  bottom: 10%;
   display: block;
-  width: 25px;
-  height: 25px;
+  width: $size-months;
+  height: $size-months;
   border-radius: 50%;
   background-color: #fff;
   color: #000;
-  line-height: 26px;
-  font-size: 20px;
+  line-height: $size-months + 1px;
+  font-size: 25px;
   text-align: center;
 }
 
+/* Info text - name, thank you message */
 #info {
   display: block;
   width: 300px;
-  height: 63px;
+  height: $size-info-height * 2;
   position: absolute;
-  left: 150px;
+  left: $size-circle;
   top: 50%;
-  margin-left: 15px;
+  margin-left: 20px;
   margin-top: -25%;
   text-align: left;
   overflow: hidden;
@@ -193,9 +202,9 @@ html, body {
 
   max-width: 92%;
   text-overflow: ellipsis;
-  font-size: 25px;
-  height: 31px;
-  line-height: 32px;
+  font-size: 35px;
+  height: $size-info-height;
+  line-height: $size-info-height + 1px;
   padding: 0 10px;
   background-color: $main-color;
   overflow: hidden;
@@ -207,9 +216,9 @@ html, body {
   top: 0;
   left: -100%;
 
-  height: 31px;
-  line-height: 32px;
-  font-size: 23px;
+  height: $size-info-height;
+  line-height: $size-info-height + 1px;
+  font-size: 30px;
   font-style: normal;
   padding: 0 10px;
   background-color: $transparent-black;
