@@ -1,0 +1,88 @@
+// Remove background for production
+body#develop { background: url(../images/sample-screen.jpg); background-size: cover; }
+
+@import 'mixins.scss';
+
+@import url(https://fonts.googleapis.com/css?family=BenchNine:400,700,300&subset=latin,latin-ext);
+
+$main-color: rgba(208, 0, 220, 0.8);
+$transparent-black: rgba(0, 0, 0, 0.6);
+
+$timer-visible-for: 5s;
+$timer-animation-delay: 0.1s;
+$timer-animation-duration: 0.8s;
+$timer-delay: $timer-animation-delay + $timer-animation-duration;
+$timer-total: $timer-visible-for + $timer-animation-delay + $timer-animation-duration;
+
+@include keyframes (slide-in) {
+  from {
+    @include vendor-prefix('transform', 'translateX(100%)');
+  }
+  to {
+    @include vendor-prefix('transform', 'translateX(0)');
+  }
+}
+@include keyframes (slide-out) {
+  from {
+    @include vendor-prefix('transform', 'translateX(0)');
+  }
+  to {
+    @include vendor-prefix('transform', 'translateX(100%)');
+  }
+}
+@include keyframes (timer) {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+body {
+  background-size: cover;
+  margin: 0px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+#body {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+#info {
+  position: absolute;
+  right: 0;
+  top: 5%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: "BenchNine", sans-serif;
+  color: #fff;
+  white-space: nowrap;
+  padding: 10px 20px;
+  background-color: $transparent-black;
+
+  @include vendor-prefix('animation', 'slide-in #{$timer-animation-duration} #{$timer-animation-delay} cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out #{$timer-animation-duration} #{$timer-total} cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards');
+}
+
+#timer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: $main-color;
+
+  @include vendor-prefix('animation', 'timer #{$timer-visible-for} #{$timer-delay} ease-in forwards');
+}
