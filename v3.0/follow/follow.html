@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Animated follow alert</title>
+        <link rel="stylesheet" href="css/animated-follow.css">
+    </head>
+
+    <body id="dev-mode">
+<!-- COPY ONLY CODE INSIDE -->
+
+        <!-- ////////////////////////////////// -->
+        <!-- //////////// HTML CODE /////////// -->
+        <!-- ////////////////////////////////// -->
+
+        <!-- main alert box window -->
+        <div id="follow">
+            <span class="circle sonar sonar-stroke sonar-infinite sonar-slow sonar-delay" id="alert-image">
+                {img}
+            </span>
+            <!-- alert text -->
+            <span id="info">
+                <!-- alert message -->
+                <!-- messageTemplate will be replaced with your message template -->
+                <!-- for example : {name} is now following! or {name} donated {amount} -->
+                <strong>{messageTemplate}</strong>
+                <em>{userMessage}</em>
+            </span>
+        </div>
+
+<!-- /COPY ONLY CODE INSIDE -->
+    </body>
+</html>
