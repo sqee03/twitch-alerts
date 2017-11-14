@@ -728,7 +728,8 @@ body {
 
 html, body {
   margin: 0;
-  padding: 0; }
+  padding: 0; 
+}
 
 #widget, #body, #alert-box, #wrap, #alert-text-wrap, #alert-text {
   position: relative;
@@ -752,6 +753,7 @@ html, body {
   text-align: center;
   text-transform: uppercase;
   text-shadow: none;
+  font-size: 20px;
   font-weight: 300;
   font-family: "BenchNine", sans-serif;
   color: #fff;
@@ -797,13 +799,19 @@ html, body {
   display: block;
   width: 100%;
   height: 100%;
-  background: url("../images/superman-light-112.png") no-repeat center center;
+  background: url("http://uploads.twitchalerts.com/000/025/613/824/1-month-112.png") no-repeat center center;
   background-size: auto;
   -webkit-animation: hovering-image 1.5s 0.1s ease-out infinite forwards;
   -moz-animation: hovering-image 1.5s 0.1s ease-out infinite forwards;
   -ms-animation: hovering-image 1.5s 0.1s ease-out infinite forwards;
   -o-animation: hovering-image 1.5s 0.1s ease-out infinite forwards;
   animation: hovering-image 1.5s 0.1s ease-out infinite forwards; }
+  .resub-3 .circle #image {
+     background-image: url("http://uploads.twitchalerts.com/000/025/613/824/3-months-112%2B.png")
+  }
+  .resub-6 .circle #image {
+     background-image: url("http://uploads.twitchalerts.com/000/025/613/824/6-months-112.png")
+  }
 
 /* Number of months viewer resuber for */
 #months {
@@ -818,6 +826,7 @@ html, body {
   background-color: #fff;
   color: #000;
   line-height: 26px;
+  font-weight: 700;
   font-size: 20px;
   text-align: center; }
 
