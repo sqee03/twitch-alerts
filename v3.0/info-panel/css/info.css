@@ -192,7 +192,14 @@ html, body {
   -moz-animation: slide-in 0.8s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.8s 5.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
   -ms-animation: slide-in 0.8s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.8s 5.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
   -o-animation: slide-in 0.8s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.8s 5.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-  animation: slide-in 0.8s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.8s 5.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards; }
+  animation: slide-in 0.8s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.8s 5.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards; 
+}
+.follow {
+  background-image: url(../images/follow-alert.gif);
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 70px !important;
+}
 
 #timer {
   position: absolute;

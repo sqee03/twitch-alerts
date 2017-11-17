@@ -75,6 +75,13 @@ html, body {
 
   @include vendor-prefix('animation', 'slide-in #{$timer-animation-duration} #{$timer-animation-delay} cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out #{$timer-animation-duration} #{$timer-total} cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards');
 }
+// Follow alert - turn on notifications
+.follow {
+  background-image: url(../images/follow-alert.gif);
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 70px !important;
+}
 
 #timer {
   position: absolute;
