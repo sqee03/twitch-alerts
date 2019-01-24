@@ -133,71 +133,66 @@ body#develop {
     -ms-transform: translateX(calc(-100% - 76.8px - 10px));
     -o-transform: translateX(calc(-100% - 76.8px - 10px));
     transform: translateX(calc(-100% - 76.8px - 10px)); } }
-@-moz-keyframes gain-size {
+@-moz-keyframes message {
+  0% {
+    opacity: 0;
+    height: 1px; }
+  100% {
+    opacity: 1;
+    height: 100px; } }
+@-webkit-keyframes message {
+  0% {
+    opacity: 0;
+    height: 1px; }
+  100% {
+    opacity: 1;
+    height: 100px; } }
+@-o-keyframes message {
+  0% {
+    opacity: 0;
+    height: 1px; }
+  100% {
+    opacity: 1;
+    height: 100px; } }
+@-ms-keyframes message {
+  0% {
+    opacity: 0;
+    height: 1px; }
+  100% {
+    opacity: 1;
+    height: 100px; } }
+@keyframes message {
+  0% {
+    opacity: 0;
+    height: 1px; }
+  100% {
+    opacity: 1;
+    height: 100px; } }
+@-moz-keyframes name {
   from {
-    -webkit-transform: scaleX(100%);
-    -moz-transform: scaleX(100%);
-    -ms-transform: scaleX(100%);
-    -o-transform: scaleX(100%);
-    transform: scaleX(100%); }
+    opacity: 1; }
   to {
-    -webkit-transform: scaleX(0);
-    -moz-transform: scaleX(0);
-    -ms-transform: scaleX(0);
-    -o-transform: scaleX(0);
-    transform: scaleX(0); } }
-@-webkit-keyframes gain-size {
+    opacity: 0; } }
+@-webkit-keyframes name {
   from {
-    -webkit-transform: scaleX(100%);
-    -moz-transform: scaleX(100%);
-    -ms-transform: scaleX(100%);
-    -o-transform: scaleX(100%);
-    transform: scaleX(100%); }
+    opacity: 1; }
   to {
-    -webkit-transform: scaleX(0);
-    -moz-transform: scaleX(0);
-    -ms-transform: scaleX(0);
-    -o-transform: scaleX(0);
-    transform: scaleX(0); } }
-@-o-keyframes gain-size {
+    opacity: 0; } }
+@-o-keyframes name {
   from {
-    -webkit-transform: scaleX(100%);
-    -moz-transform: scaleX(100%);
-    -ms-transform: scaleX(100%);
-    -o-transform: scaleX(100%);
-    transform: scaleX(100%); }
+    opacity: 1; }
   to {
-    -webkit-transform: scaleX(0);
-    -moz-transform: scaleX(0);
-    -ms-transform: scaleX(0);
-    -o-transform: scaleX(0);
-    transform: scaleX(0); } }
-@-ms-keyframes gain-size {
+    opacity: 0; } }
+@-ms-keyframes name {
   from {
-    -webkit-transform: scaleX(100%);
-    -moz-transform: scaleX(100%);
-    -ms-transform: scaleX(100%);
-    -o-transform: scaleX(100%);
-    transform: scaleX(100%); }
+    opacity: 1; }
   to {
-    -webkit-transform: scaleX(0);
-    -moz-transform: scaleX(0);
-    -ms-transform: scaleX(0);
-    -o-transform: scaleX(0);
-    transform: scaleX(0); } }
-@keyframes gain-size {
+    opacity: 0; } }
+@keyframes name {
   from {
-    -webkit-transform: scaleX(100%);
-    -moz-transform: scaleX(100%);
-    -ms-transform: scaleX(100%);
-    -o-transform: scaleX(100%);
-    transform: scaleX(100%); }
+    opacity: 1; }
   to {
-    -webkit-transform: scaleX(0);
-    -moz-transform: scaleX(0);
-    -ms-transform: scaleX(0);
-    -o-transform: scaleX(0);
-    transform: scaleX(0); } }
+    opacity: 0; } }
 @-moz-keyframes timer {
   from {
     width: 0; }
@@ -223,6 +218,21 @@ body#develop {
     width: 0; }
   to {
     width: 100%; } }
+@-moz-keyframes blink {
+  50% {
+    opacity: 1; } }
+@-webkit-keyframes blink {
+  50% {
+    opacity: 1; } }
+@-o-keyframes blink {
+  50% {
+    opacity: 1; } }
+@-ms-keyframes blink {
+  50% {
+    opacity: 1; } }
+@keyframes blink {
+  50% {
+    opacity: 1; } }
 body {
   background-size: cover;
   margin: 0px auto;
@@ -249,36 +259,76 @@ html, body {
   font-weight: 300;
   font-family: "BenchNine", sans-serif;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.7);
-  -webkit-animation: slide-in 0.8s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.8s 9.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-  -moz-animation: slide-in 0.8s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.8s 9.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-  -ms-animation: slide-in 0.8s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.8s 9.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-  -o-animation: slide-in 0.8s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.8s 9.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-  animation: slide-in 0.8s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.8s 9.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards; }
+  -webkit-animation: slide-in 0.8s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.8s 13.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  -moz-animation: slide-in 0.8s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.8s 13.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  -ms-animation: slide-in 0.8s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.8s 13.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  -o-animation: slide-in 0.8s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.8s 13.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation: slide-in 0.8s 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out 0.8s 13.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards; }
   #chat-item .name {
     position: absolute;
-    height: 100%;
+    top: 50%;
+    margin-top: -15px;
+    height: 30px;
     width: 100%;
-    margin: 0;
-    padding: 10px;
-    line-height: 100%;
-    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     text-align: center;
-    background-color: rgba(208, 0, 220, 0.8);
+    text-transform: uppercase;
     color: #fff;
     box-sizing: border-box;
     overflow: hidden;
     white-space: nowrap;
-    -webkit-animation: gain-size 0.5s 1.9s ease forwards;
-    -moz-animation: gain-size 0.5s 1.9s ease forwards;
-    -ms-animation: gain-size 0.5s 1.9s ease forwards;
-    -o-animation: gain-size 0.5s 1.9s ease forwards;
-    animation: gain-size 0.5s 1.9s ease forwards; }
+    font-size: 125%;
+    -webkit-animation: name 0.5s 3.4s ease forwards;
+    -moz-animation: name 0.5s 3.4s ease forwards;
+    -ms-animation: name 0.5s 3.4s ease forwards;
+    -o-animation: name 0.5s 3.4s ease forwards;
+    animation: name 0.5s 3.4s ease forwards; }
+    #chat-item .name .nick {
+      padding-left: 10px; }
+      #chat-item .name .nick ins {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 3px;
+        height: 100%;
+        background-color: rgba(208, 0, 220, 0.8); }
+    #chat-item .name .typing-indicator {
+      margin-left: 10px;
+      will-change: transform;
+      animation: 2s bulge infinite ease-out; }
+      #chat-item .name .typing-indicator span {
+        height: 10px;
+        width: 10px;
+        float: left;
+        margin: 0 1px;
+        background-color: rgba(208, 0, 220, 0.8);
+        display: block;
+        border-radius: 50%;
+        opacity: 0.4; }
+        #chat-item .name .typing-indicator span:nth-of-type(1) {
+          animation: 1s blink infinite 0.3333s; }
+        #chat-item .name .typing-indicator span:nth-of-type(2) {
+          animation: 1s blink infinite 0.6666s; }
+        #chat-item .name .typing-indicator span:nth-of-type(3) {
+          animation: 1s blink infinite 0.9999s; }
   #chat-item .message {
-    float: left;
-    margin: 0;
-    padding: 10px 20px 20px 20px;
-    box-sizing: border-box; }
+    height: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    -webkit-animation: message 2s 3.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    -moz-animation: message 2s 3.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    -ms-animation: message 2s 3.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    -o-animation: message 2s 3.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    animation: message 2s 3.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards; }
+    #chat-item .message p {
+      margin: 0;
+      padding: 10px 20px 12px 20px; }
 
 #timer {
   position: absolute;
@@ -287,8 +337,8 @@ html, body {
   width: 0;
   height: 2px;
   background-color: rgba(208, 0, 220, 0.8);
-  -webkit-animation: timer 9s 0.9s ease-in forwards;
-  -moz-animation: timer 9s 0.9s ease-in forwards;
-  -ms-animation: timer 9s 0.9s ease-in forwards;
-  -o-animation: timer 9s 0.9s ease-in forwards;
-  animation: timer 9s 0.9s ease-in forwards; }
+  -webkit-animation: timer 9s 4.3s ease-in forwards;
+  -moz-animation: timer 9s 4.3s ease-in forwards;
+  -ms-animation: timer 9s 4.3s ease-in forwards;
+  -o-animation: timer 9s 4.3s ease-in forwards;
+  animation: timer 9s 4.3s ease-in forwards; }

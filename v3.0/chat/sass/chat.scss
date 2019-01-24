@@ -31,18 +31,22 @@ $main-color: rgba(208, 0, 220, 0.8);
 $secondary-color: #277CFB;
 $timer-color: $main-color;
 $transparent-black-color: rgba(0, 0, 0, 0.7);
+$transparent-black-heavy-color: rgba(0, 0, 0, 0.9);
 
 // Timer
 $main-visible-for: 9s;
 $main-animation-delay: 0.1s;
 $main-animation-duration: 0.8s;
-// Gain size animation
-$gain-animation-duration: 0.5s;
-$gain-animation-delay: $main-animation-delay + $main-animation-duration + 1s;
+// Name animation
+$name-animation-duration: 0.5s;
+$name-animation-delay: $main-animation-delay + $main-animation-duration + 2.5s;
+// Message animation
+$message-animation-duration: 2s;
+$message-animation-delay: $main-animation-delay + $main-animation-duration + 2.5s;
 // Timer line
-$timer-animation-delay: $main-animation-delay + $main-animation-duration;
+$timer-animation-delay: $main-animation-delay + $main-animation-duration + $name-animation-delay;
 // Total duration of all animations before chat item hides
-$total-duration: $main-visible-for + $main-animation-delay + $main-animation-duration;
+$total-duration: $main-visible-for + $main-animation-delay + $main-animation-duration + $name-animation-delay + $name-animation-duration;
 
 
 @include keyframes (slide-in) {
@@ -63,12 +67,22 @@ $total-duration: $main-visible-for + $main-animation-delay + $main-animation-dur
     @include vendor-prefix('transform', 'translateX(' + unquote("calc(-100% - " + calcSize($screen-res-x, $chat-left) + " - #{$off-screen-correction})") + ')');
   }
 }
-@include keyframes (gain-size) {
+@include keyframes (message) {
+  0% {
+    opacity: 0;
+    height: 1px;
+  }
+  100% {
+    opacity: 1;
+    height: 100px;
+  }
+}
+@include keyframes (name) {
   from {
-    @include vendor-prefix('transform', 'scaleX(100%)');
+    opacity: 1;
   }
   to {
-    @include vendor-prefix('transform', 'scaleX(0)');
+    opacity: 0;
   }
 }
 @include keyframes (timer) {
@@ -77,6 +91,11 @@ $total-duration: $main-visible-for + $main-animation-delay + $main-animation-dur
   }
   to {
     width: 100%;
+  }
+}
+@include keyframes (blink) {
+  50% {
+    opacity: 1;
   }
 }
 
@@ -109,32 +128,79 @@ html, body {
   font-weight: 300;
   font-family: "BenchNine", sans-serif;
   color: #fff;
-  background-color: $transparent-black-color;
 
   @include vendor-prefix('animation', 'slide-in #{$main-animation-duration} #{$main-animation-delay} cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, slide-out #{$main-animation-duration} #{$total-duration} cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards');
 
   .name {
     position: absolute;
-    height: 100%;
+    top: 50%;
+    margin-top: -15px;
+    height: 30px;
     width: 100%;
-    margin: 0;
-    padding: 10px;
-    line-height: 100%;
-    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     text-align: center;
-    background-color: $main-color;
+    text-transform: uppercase;
+    // background-color: $transparent-black-color;
     color: #fff;
     box-sizing: border-box;
     overflow: hidden;
     white-space: nowrap;
+    font-size: 125%;
 
-    @include vendor-prefix('animation', 'gain-size #{$gain-animation-duration} #{$gain-animation-delay} ease forwards');
+    .nick {
+      padding-left: 10px;
+
+      ins {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 3px;
+        height: 100%;
+        background-color: $main-color;
+      }
+    }
+
+    .typing-indicator {
+      margin-left: 10px;
+      will-change: transform;
+      animation: 2s bulge infinite ease-out;
+
+      span {
+        height: 10px;
+        width: 10px;
+        float: left;
+        margin: 0 1px;
+        background-color: $main-color;
+        display: block;
+        border-radius: 50%;
+        opacity: 0.4;
+        @for $i from 1 through 3 {
+          &:nth-of-type(#{$i}) {
+            animation: 1s blink infinite ($i * .3333s);
+          }
+        }
+      }
+    }
+
+    @include vendor-prefix('animation', 'name #{$name-animation-duration} #{$name-animation-delay} ease forwards');
   }
   .message {
-    float: left;
-    margin: 0;
-    padding: 10px 20px 20px 20px;
+    height: 0;
     box-sizing: border-box;
+    overflow: hidden;
+    opacity: 0;
+    background-color: $transparent-black-color;
+
+    p {
+      margin: 0;
+      padding: 10px 20px 12px 20px;
+    }
+
+    @include vendor-prefix('animation', 'message #{$message-animation-duration} #{$message-animation-delay} cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards');
   }
 }
 
